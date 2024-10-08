@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Vicky Sigler",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -71.96, "attrs": {} },
+    { "type": "chip-rain-sensor", "id": "chip1", "top": 260.22, "left": -72, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -47.7,
+      "left": -341.4,
+      "attrs": { "temperature": "-0.3", "humidity": "41.5" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 44.8,
+      "left": 159.2,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 204.8,
+      "left": -383.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:SDA", "esp:21", "green", [ "v28.8", "h67.3", "v-201.6", "h297.6", "v124.8" ] ],
+    [ "esp:5V", "dht1:VCC", "white", [ "h-124.65", "v-38.4", "h-144" ] ],
+    [ "esp:13", "chip1:DO", "yellow", [ "h-57.45", "v-220.8" ] ],
+    [ "lcd1:SCL", "esp:22", "white", [ "h-9.6", "v-57.3" ] ],
+    [ "lcd1:SDA", "esp:21", "gray", [ "h-19.2", "v-19" ] ],
+    [ "lcd1:VCC", "esp:3V3", "#8f4814", [ "h-28.8", "v-105.5", "h-163.35" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-19.2", "v-48" ] ],
+    [ "chip1:GND", "esp:GND.1", "blue", [ "h-38.4", "v220.8" ] ],
+    [ "chip1:VCC", "esp:5V", "red", [ "h-48", "v278.4" ] ],
+    [ "dht1:GND", "esp:GND.3", "red", [ "v19.2", "h57.6", "v-163.2", "h297.6", "v105.6" ] ],
+    [ "chip1:AO", "esp:34", "cyan", [ "h-38.4", "v-9.6", "h-28.8", "v-316.8" ] ],
+    [ "ldr1:AO", "esp:32", "#8f4814", [ "h9.6", "v-259.9", "h115.2", "v124.8" ] ],
+    [ "ldr1:GND", "esp:GND.1", "purple", [ "h28.8", "v-86.8" ] ],
+    [ "ldr1:VCC", "esp:3V3", "green", [ "h19.2", "v-201.6" ] ]
+  ],
+  "dependencies": {}
+}
