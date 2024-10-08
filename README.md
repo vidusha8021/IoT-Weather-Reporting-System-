@@ -30,4 +30,9 @@ This project is a weather monitoring system that sends environmental data to a c
  - This IoT-based weather monitoring system successfully demonstrates how environmental data can be collected and monitored both locally and remotely in real time.
 - By leveraging cloud connectivity and simple sensor integration, it provides an efficient and accessible way to track weather conditions.
 
+## Authors
+
+- [@Vidusha Bavantha](https://github.com/vidusha8021)
+- [@Pasindu Lakmith](https://github.com/PasinduLakmith11)
+
 
