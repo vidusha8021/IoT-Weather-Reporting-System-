@@ -34,5 +34,5 @@ This project is a weather monitoring system that sends environmental data to a c
 
 - [@Vidusha Bavantha](https://github.com/vidusha8021)
 - [@Pasindu Lakmith](https://github.com/PasinduLakmith11)
-
-
+- [@Hiroshan Madusanka Kumara](https://github.com/Hiroshan01)
+- [@Aruna Kaviska](https://github.com/KavishkaRanaweera)
